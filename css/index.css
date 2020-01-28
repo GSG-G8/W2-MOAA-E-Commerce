@@ -33,15 +33,17 @@ header{
     color: aliceblue;
     font-size: 25px;
     text-decoration: none;
+    background-color: teal;
     padding: 10px 20px;
     border: 1px solid #fff;
     /* for delay  */
+    border-radius: 10px;
     transition: 0.6s ease;
 }
 
 .btn-page ul li a:hover {
     background-color: #fff;
-    color: black;
+    color: teal;
 }
 
 @media only screen and (max-width: 768px) {
