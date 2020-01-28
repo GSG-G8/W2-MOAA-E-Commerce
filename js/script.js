@@ -58,7 +58,7 @@ function updateProduct(arr, obj) {
 //  let product = findProduct(products, 2);
 //  cart = addToCart(cart, product);
 function addToCart(arr, product) {
-    
+    return [...arr, product];
 }
 
 // return new copy of array with the new object
@@ -66,11 +66,14 @@ function addToCart(arr, product) {
 //  let product = findProduct(products, 2);
 //  cart = addToCart(cart, product);
 function removeFromCart(arr, id) {
-
+    return arr.filter(pro => pro.id!=id);
 }
 
+//return total price from an array of objects
+//example : 
+//  let total = totalPrice(product);
 function totalPrice(arr) {
-    
+    return arr.reduce( (acc,cur) => acc+cur.price, 0);
 }
 ////////////////////////
 
@@ -80,4 +83,7 @@ module.exports = {
     deleteProduct,
     findProduct,
     updateProduct,
+    addToCart,
+    removeFromCart,
+    totalPrice,
 }

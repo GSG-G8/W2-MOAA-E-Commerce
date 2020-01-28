@@ -4,6 +4,9 @@ const {
   deleteProduct,
   findProduct,
   updateProduct,
+  addToCart,
+  removeFromCart,
+  totalPrice,
 } = require('../js/script.js');
 
 ////////////////////////////  makeProduct ///////////////////////////////////
@@ -32,7 +35,7 @@ test('addProduct() should add the object to the array', function () {
   expect(newProducts).toEqual([{id:1, val:'hello'}, {id:2, val:'world'}]);
 });
 
-////////////////////////////  delete ///////////////////////////////////
+////////////////////////////  deleteProduct ///////////////////////////////////
 
 test('deleteProduct() should not mutate the origional array', function () {
   let currentProducts = [{id:1, val:'hello'}, {id:2, val:'world'}];
@@ -99,3 +102,50 @@ test('updateProduct() should update the object.', function () {
   expect(pro2).toEqual([{id:1, val:'hello'}, {id:2, val:'hi'}]);
   expect(pro3).toEqual([{id:1, val:'hello'}, {id:2, val:'world'}]);
 });
+
+////////////////////////////  addToCart ///////////////////////////////////
+test('addToCart() should not mutate the origional array', function () {
+  let currentProducts = [{id:1, val:'hello'}, {id:2, val:'world'}];
+  let oldProducts = [...currentProducts];
+  
+  addToCart(currentProducts, {id:3, val:'hi'});
+  expect(oldProducts).toEqual(currentProducts);
+});
+
+test('addToCart() should add the object to the array', function () {
+  let oldProducts = [{id:1, val:'hello'}];
+  let newProducts = addToCart(oldProducts, {id:2, val:'world'});
+  
+  expect(newProducts).toEqual([{id:1, val:'hello'}, {id:2, val:'world'}]);
+});
+
+////////////////////////////  removeFromCart ///////////////////////////////////
+
+test('removeFromCart() should not mutate the origional array', function () {
+  let currentProducts = [{id:1, val:'hello'}, {id:2, val:'world'}];
+  let oldProducts = [...currentProducts];
+
+  removeFromCart(currentProducts, 1);
+  expect(oldProducts).toEqual(currentProducts);
+
+  removeFromCart(currentProducts, 2);
+  expect(oldProducts).toEqual(currentProducts);
+
+  removeFromCart(currentProducts, 3);
+  expect(oldProducts).toEqual(currentProducts);
+});
+
+test('removeFromCart() should remove the object from the array', function () {
+  let currentProducts = [{id:1, val:'hello'}, {id:2, val:'world'}];
+  
+  let del1 = removeFromCart(currentProducts, 1);
+  let del2 = removeFromCart(currentProducts, 2);
+  let del3 = removeFromCart(currentProducts, 3);
+
+  expect(del1).toEqual([{id:2, val:'world'}]);
+  expect(del2).toEqual([{id:1, val:'hello'}]);
+  expect(del3).toEqual([{id:1, val:'hello'}, {id:2, val:'world'}]);
+});
+
+////////////////////////////  totalPrice ///////////////////////////////////
+//
