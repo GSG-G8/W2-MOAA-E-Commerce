@@ -43,9 +43,41 @@ function findProduct(arr, id) {
     return arr.find(pro => pro.id==id);
 }
 
+// update one object from array based on id
+// example : update product with id '3' from 'products'
+//  let newProduct = makeProduct(3, "Galaxy S7", "samsung", 200.0, "samsung-2.jpg", 3)
+//  products = updateProduct(products, newProduct);
+function updateProduct(arr, obj) {
+    return arr.map(pro => pro.id==obj.id ? obj : pro);
+}
+
+///////////////////////
+
+// return new copy of array with the new object
+// example : add product with id '2' to cart 'cart'
+//  let product = findProduct(products, 2);
+//  cart = addToCart(cart, product);
+function addToCart(arr, product) {
+    
+}
+
+// return new copy of array with the new object
+// example : add product with id '2' to cart 'cart'
+//  let product = findProduct(products, 2);
+//  cart = addToCart(cart, product);
+function removeFromCart(arr, id) {
+
+}
+
+function totalPrice(arr) {
+    
+}
+////////////////////////
+
 module.exports = {
     makeProduct,
     addProduct,
     deleteProduct,
-    findProduct
+    findProduct,
+    updateProduct,
 }

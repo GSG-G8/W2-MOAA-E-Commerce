@@ -3,6 +3,7 @@ const {
   addProduct,
   deleteProduct,
   findProduct,
+  updateProduct,
 } = require('../js/script.js');
 
 ////////////////////////////  makeProduct ///////////////////////////////////
@@ -69,4 +70,32 @@ test('findProduct() should find the object.', function () {
   expect(pro1).toEqual({id:1, val:'hello'});
   expect(pro2).toEqual({id:2, val:'world'});
   expect(pro3).toEqual(undefined);
+});
+
+////////////////////////////  updateProduct ///////////////////////////////////
+
+test('updateProduct() should not mutate the origional array', function () {
+  let currentProducts = [{id:1, val:'hello'}, {id:2, val:'world'}];
+  let oldProducts = [...currentProducts];
+
+  updateProduct(currentProducts, {id:1, val:'hi'});
+  expect(oldProducts).toEqual(currentProducts);
+
+  updateProduct(currentProducts, {id:2, val:'hi'});
+  expect(oldProducts).toEqual(currentProducts);
+
+  updateProduct(currentProducts, {id:3, val:'hi'});
+  expect(oldProducts).toEqual(currentProducts);
+});
+
+test('updateProduct() should update the object.', function () {
+  let currentProducts = [{id:1, val:'hello'}, {id:2, val:'world'}];
+
+  let pro1 = updateProduct(currentProducts, {id:1, val:'hi'});
+  let pro2 = updateProduct(currentProducts, {id:2, val:'hi'});
+  let pro3 = updateProduct(currentProducts, {id:3, val:'hi'});
+
+  expect(pro1).toEqual([{id:1, val:'hi'}, {id:2, val:'world'}]);
+  expect(pro2).toEqual([{id:1, val:'hello'}, {id:2, val:'hi'}]);
+  expect(pro3).toEqual([{id:1, val:'hello'}, {id:2, val:'world'}]);
 });
