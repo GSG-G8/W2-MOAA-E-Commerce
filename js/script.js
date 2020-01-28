@@ -36,9 +36,16 @@ function deleteProduct(arr, id) {
     return arr.filter(pro => pro.id!=id);
 }
 
+// find object by id from array of objects;
+//example : find object with id '2' from array 'products;
+//  let product = findProduct(products, 2);
+function findProduct(arr, id) {
+    return arr.find(pro => pro.id==id);
+}
+
 module.exports = {
     makeProduct,
     addProduct,
-    deleteProduct
-  }
-  
+    deleteProduct,
+    findProduct
+}

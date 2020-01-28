@@ -2,9 +2,12 @@ const {
   makeProduct,
   addProduct,
   deleteProduct,
+  findProduct,
 } = require('../js/script.js');
 
-test('makeProduct should return an object.', function () {
+////////////////////////////  makeProduct ///////////////////////////////////
+
+test('makeProduct() should create an object.', function () {
   let actual = makeProduct(3, "Galaxy S7", "samsung", 200.0, "samsung-2.jpg", 3);
   let expected = {id:3, name:"Galaxy S7", details:"samsung", price:200.0, image:"samsung-2.jpg", category:3}
 
@@ -47,13 +50,23 @@ test('deleteProduct() should remove the object from the array', function () {
   
   let del1 = deleteProduct(currentProducts, 1);
   let del2 = deleteProduct(currentProducts, 2);
+  let del3 = deleteProduct(currentProducts, 3);
 
   expect(del1).toEqual([{id:2, val:'world'}]);
   expect(del2).toEqual([{id:1, val:'hello'}]);
+  expect(del3).toEqual([{id:1, val:'hello'}, {id:2, val:'world'}]);
 });
 
+////////////////////////////  findProduct ///////////////////////////////////
 
-// let obj = {a:1};
-// let  arr = [];
-// let  actual = addProduct(arr,obj);
-// let expected = [{a:1}];
+test('findProduct() should find the object.', function () {
+  let currentProducts = [{id:1, val:'hello'}, {id:2, val:'world'}];
+
+  let pro1 = findProduct(currentProducts, 1);
+  let pro2 = findProduct(currentProducts, 2);
+  let pro3 = findProduct(currentProducts, 3);
+
+  expect(pro1).toEqual({id:1, val:'hello'});
+  expect(pro2).toEqual({id:2, val:'world'});
+  expect(pro3).toEqual(undefined);
+});
