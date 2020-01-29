@@ -45,7 +45,7 @@ function updateProduct(arr, obj) {
 function searchProduct(arr, text="", price="", category="") {
     return arr.filter(pro => pro.name.includes(text)
         && (pro.price+"").includes(price)
-        && pro.category.includes(category)
+        && (pro.category+"").includes(category)
     );
 }
 
