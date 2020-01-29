@@ -45,6 +45,9 @@ body{
     background-color: teal;
     color: white;
 }
+ #footer  {
+    padding: 15px;
+ }
 @media(max-width:1200px){
     .product{
         width: 40%;
