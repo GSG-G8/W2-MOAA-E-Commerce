@@ -14,7 +14,7 @@ body{
 }
 .section_product_container{
     display: flex;
-    justify-content:space-between;
+    justify-content:center;
     flex-wrap: wrap;
 }
 .product{
