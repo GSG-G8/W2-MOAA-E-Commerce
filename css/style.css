@@ -45,6 +45,7 @@
 }
 .fa-search{
     font-size: 2rem;
+    text-align: center;
 
 }
 .section_search-input{
@@ -64,6 +65,8 @@
     width: 100%;
     z-index: 1;
     color: black;
+    position: absolute;
+    bottom: 0px;
  }
 
  #footer p {
@@ -72,6 +75,9 @@
  }
 
 @media(max-width:600px){
+    *{
+        font-size: 1rem;
+    }
     .container{
         width: 95%;
     }
@@ -93,7 +99,7 @@
 
     .header_ancor{
         color: white;
-        font-size: 20px;
+        font-size: 1.2rem;
         text-decoration: none;
     }
     .header_ancor:hover{
