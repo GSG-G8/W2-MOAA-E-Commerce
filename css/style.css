@@ -55,6 +55,22 @@
     border-radius: 10px;
 }
 
+
+#footer {
+    margin-top: 20px;
+    background-color:#FCFCFC;
+    height: 100px;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    color: black;
+ }
+
+ #footer p {
+    font-size: 3rem;
+    padding-top: 40px;
+ }
+
 @media(max-width:600px){
     .container{
         width: 95%;
