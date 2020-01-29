@@ -1,11 +1,4 @@
-let products = [];
-let cart = [];
-let nextID = 1;
 
-let categories = [
-    "fff",
-    "asd"
-];
 ////////////////////////////////// products //////////////////////////////////
 
 //make a product as object
@@ -59,10 +52,9 @@ function searchProduct(arr, text="", price=-1, category=-1) {
 
 ////////////////////////////////// cart //////////////////////////////////
 
-// return new copy of array with the new object
-// example : add product with id '2' to cart 'cart'
-//  let product = findProduct(products, 2);
-//  cart = addToCart(cart, product);
+// return new copy of array with the new ID
+// example : add product with id '12' to cart 'cart'
+//  cart = addToCart(cart, 12);
 function addToCart(arr, id) {
     return [...arr, id];
 }
@@ -82,10 +74,7 @@ function totalPrice(arr, ids) {
     return ids.map(id=>arr.find(pro=>pro.id==id)).reduce((acc,cur)=>acc+(cur?cur.price:0),0);
 }
 
-
-
-
-module.exports = {
+if (typeof module!=="undefined") module.exports = {
     makeProduct,
     addProduct,
     deleteProduct,

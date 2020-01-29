@@ -18,12 +18,14 @@ function domAddProduct() {
     products = addProduct(products, pro);
 
     saveLocal(products, "products");
+    saveLocal(nextID, "nextID");
     refreshSeller(products);
 }
 
 function editThis() {
 
 }
+
 function removeThis() {
     products = deleteProduct(products, this.proID);
     saveLocal(products, "products");
@@ -73,6 +75,12 @@ function refreshSeller(arr) {
         div.appendChild(content);
         cont.appendChild(div);
     });
+}
+
+function domSearch() {
+    let text = document.getElementById("search").value;
+    console.log(text);
+    refreshSeller(searchProduct(products, text));
 }
 
 refreshSeller(products);
