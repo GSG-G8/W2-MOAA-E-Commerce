@@ -51,7 +51,7 @@
 .section_search-input{
     padding: 10px;
     margin-top: 20px;
-    width: 40%;
+    width: 50%;
     border: 1px solid gray;
     border-radius: 10px;
 }
@@ -69,7 +69,12 @@
     background-color: #333;
     box-sizing: border-box;
  }
-
+.search__option{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: teal;
+    color: white;
+}
 
 
 @media(max-width:600px){
