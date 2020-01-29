@@ -79,8 +79,10 @@ function refreshSeller(arr) {
 
 function domSearch() {
     let text = document.getElementById("search").value;
-    console.log(text);
-    refreshSeller(searchProduct(products, text));
+    let type = document.getElementsByClassName("search__option")[0].value; 
+    if (type=="name") refreshSeller(searchProduct(products, text)); else
+    if (type=="price") refreshSeller(searchProduct(products, "", text)); else
+    if (type=="cat") refreshSeller(searchProduct(products, "", "", text));
 }
 
 refreshSeller(products);

@@ -42,10 +42,10 @@ function updateProduct(arr, obj) {
 // filter array based on 'name', 'price', and 'category'
 // example : find all products that includs 'car' in name
 //  let search = searchProduct(product, 'car')
-function searchProduct(arr, text="", price=-1, category=-1) {
+function searchProduct(arr, text="", price="", category="") {
     return arr.filter(pro => pro.name.includes(text)
-        && (price==-1 || pro.price==price)
-        && (category==-1 || pro.category==category)
+        && (pro.price+"").includes(price)
+        && (pro.category+"").includes(category)
     );
 }
 
