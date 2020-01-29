@@ -1,0 +1,22 @@
+{
+  "name": "w2-moaa-e-commerce",
+  "version": "1.0.0",
+  "description": "moaa",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G8/W2-MOAA-E-Commerce.git"
+  },
+  "author": "moaa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G8/W2-MOAA-E-Commerce/issues"
+  },
+  "homepage": "https://github.com/GSG-G8/W2-MOAA-E-Commerce#readme",
+  "dependencies": {
+    "jest": "^25.1.0"
+  }
+}
