@@ -57,8 +57,8 @@ function updateProduct(arr, obj) {
 // example : add product with id '2' to cart 'cart'
 //  let product = findProduct(products, 2);
 //  cart = addToCart(cart, product);
-function addToCart(arr, product) {
-    return [...arr, product];
+function addToCart(arr, id) {
+    return [...arr, id];
 }
 
 // return new copy of array with the new object
@@ -66,14 +66,14 @@ function addToCart(arr, product) {
 //  let product = findProduct(products, 2);
 //  cart = addToCart(cart, product);
 function removeFromCart(arr, id) {
-    return arr.filter(pro => pro.id!=id);
+    return arr.filter(proID => proID!=id);
 }
 
-//return total price from an array of objects
+//return total price from an array of IDs of Products
 //example : 
-//  let total = totalPrice(product);
-function totalPrice(arr) {
-    return arr.reduce( (acc,cur) => acc+cur.price, 0);
+//  let total = totalPrice(cart);
+function totalPrice(arr, ids) {
+    return ids.map(id=>arr.find(pro=>pro.id==id)).reduce((acc,cur)=>acc+(cur?cur.price:0),0);
 }
 ////////////////////////
 
