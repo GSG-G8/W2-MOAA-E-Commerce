@@ -12,7 +12,11 @@ function removeLocal(name) {
     localStorage.removeItem(name);
 }
 
+let products = loadLocal("products") || [];
+let cart = loadLocal("cart") || [];
+let nextID = loadLocal("nextID") || 1;
 
-products = loadLocal("products") || [];
-cart = loadLocal("cart") || [];
-nextID = loadLocal("nextID") || 1;
+let categories = [
+    "fff",
+    "asd"
+];
