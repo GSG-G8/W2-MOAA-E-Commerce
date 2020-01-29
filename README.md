@@ -5,7 +5,7 @@
 ## About MOAA Sooq ##
     This site to sell and bay products from the internet and its a E-commarce app
 
-## what is the MOAA Sooq have ##
+## Users Stories ##
 1. Buyer/Customer
 
 * I want to see all of the items available on the store
