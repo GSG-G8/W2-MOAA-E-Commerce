@@ -23,12 +23,14 @@
             <section class="clearfloat">
                 <div class="container">
                 <label for="search" class="fa fa-search"></label>
-                <input id="search" class="section_search-input" type="search" placeholder="search">
+
+                <input id="search" class="section_search-input" type="search" placeholder="search" onkeyup="domSearchCustomer()">
                 <select class="search__option">
                     <option value="name">name</option>
                     <option value="price">price</option>
                     <option value="cat">categories</option>
                 </select>
+                
             </div>
         </section>
         </header>
@@ -37,55 +39,6 @@
             <div class="container">
             <h1 class="section-product-title">Products</h1>
             <div class="section_product_container">
-                <div class="product">
-                    <img class="img-product" src="img/logo.png"><br>
-                    <p>title : product</p>
-                    <p>price : 100$</p>
-                    <button class="section-product-btn">add to cart</button>
-                </div>
-
-                <div class="product">
-                    <img class="img-product" src="img/logo.png"><br>
-                    <p>title : product</p>
-                    <p>price : 100$</p>
-                    <button class="section-product-btn">add to cart</button>
-                </div>
-
-                <div class="product">
-                    <img class="img-product" src="img/logo.png"><br>
-                    <p>title : product</p>
-                    <p>price : 100$</p>
-                    <button class="section-product-btn">add to cart</button>
-                </div>
-
-                <div class="product">
-                    <img class="img-product" src="img/logo.png"><br>
-                    <p>title : product</p>
-                    <p>price : 100$</p>
-                    <button class="section-product-btn">add to cart</button>
-                </div>
-
-                <div class="product">
-                    <img class="img-product" src="img/logo.png"><br>
-                    <p>title : product</p>
-                    <p>price : 100$</p>
-                    <button class="section-product-btn">add to cart</button>
-                </div>
-
-                <div class="product">
-                    <img class="img-product" src="img/logo.png"><br>
-                    <p>title : product</p>
-                    <p>price : 100$</p>
-                    <button class="section-product-btn">add to cart</button>
-                </div>
-
-                <div class="product">
-                    <img class="img-product" src="img/logo.png"><br>
-                    <p>title : product</p>
-                    <p>price : 100$</p>
-                    <button class="section-product-btn">add to cart</button>
-                </div>
-
                 <div class="product">
                     <img class="img-product" src="img/logo.png"><br>
                     <p>title : product</p>
@@ -104,5 +57,9 @@
         <footer id="footer">
             <p>&copy; Copyright 2020. All Rights Reserved for MOAA</p>
         </footer>
+
+        <script src="js/script.js"></script>
+        <script src="js/localstorage.js"></script>
+        <script src="js/DOM_customer.js"></script>
     </body>
 </html>
