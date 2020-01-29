@@ -1,12 +1,12 @@
 *{
     margin: 0;
     font-size: 25%;
-
 }
 .all-product{
     padding-top: 2%;
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 20rem;
 }
 h1 {
     color:black;
@@ -61,7 +61,7 @@ h1 {
 .product-img{
         /* border: 1px solid gray; */
     width:90%;
-    height: 35rem;
+    height: 45rem;
 }
 .button {
     background-color: #4CAF50; /* Green */
@@ -174,4 +174,28 @@ textarea {
         border-radius: 10px;
         background-color: teal;
         color: white;
+    }
+
+    @media(max-width:600px){
+        .flex-content {
+            flex-direction: column;
+            margin-top: 3rem;
+
+        }
+        .flex-content div {
+           width: 90%;
+           margin: 0 auto;
+           padding: 1px;   
+        }
+
+        .product-img{
+        padding-left: 20%;
+            /* border: 1px solid gray; */
+        width:50%;
+      
+    }
+
+.flex-heder {
+    display: none;
+}
     }
