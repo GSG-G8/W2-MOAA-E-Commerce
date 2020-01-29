@@ -32,32 +32,35 @@
 - The app should be accessible, responsive, and should save its state even after closing the page `local storage`
 
 ## How we create this app ##
-1. This site we creat it by HTML,Javascript and css Without any framework and we work as Paire programinig, 
-2. You will see 3 main pagies in our site 
-    * First page we creat have tow buttons
-     first one take us to seller and the second one take us to the bayer site. 
-    * Second page is the seller sit :
+1. This site we create it by HTML,Javascript and css Without any framework and we work as Paire programinig, 
+2. You will see 3 main pages in our site 
+    * First page is the main :
+      - we create tow buttons first one take us to seller page and the second one take us to buyer page. 
+    * Second page is the seller :
       - you can add product by this page .
       - delete product
       - edit product
       - search for products
-    * Third page is view all products
+    * Third page is view all products (customer page)
         - add to cart
-    * Fourth page 
-    * The last section is contact us form and our social media links.
+        - search about product
+    * Fourth page (cart page)
+       - it contains the product that the customer add it
+       - customer can delete produt from the cart
+   
 
 ## Works As Group 
  `How we Make it`
 
- consider the form and content of the site
+ Consider the form and content of the site
  Draw the site plan and define the layout
- Divide the project work into team members so that the work is as pairs
- each pairs work on their sec and make thier issues
- we gather all sections 
-    * We decide as ateam to make issues for this site and solve it one by one.
+ Divide the project work into team members , at first we work individual then we work as pairs
+ Each one work on his/her section 
+ We gather all sections 
+    * We decide as a team to make issues for this site and solve it one by one.
 
 ## Stretch goals
-Live chat
-Channle for the site
-get more accessibility for our sit
+add check out interface using payment ways
+Develop cart interface
+get more accessibility for our site
 get it modern layout 
