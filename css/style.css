@@ -63,7 +63,7 @@
     width: 100%;
     z-index: 1;
     color: white;
-    position: relative;
+    position: fixed;
     bottom: 0px;
     margin-top: 20px;
     background-color: #333;
