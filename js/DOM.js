@@ -1,4 +1,10 @@
 ////////////////////////////////// DOM //////////////////////////////////
+const name = document.getElementById("name");
+const detail = document.getElementById("detail");
+const price = document.getElementById("price");
+const cat = document.getElementById("cat");
+const img = document.getElementById("img");
+
 
 const addbtn = document.getElementById("add");
 addbtn.addEventListener('click', function() {
@@ -8,22 +14,31 @@ addbtn.addEventListener('click', function() {
 
 
 function domAddProduct() {
-    const name = document.getElementById("name").value;
-    const detail = document.getElementById("detail").value;
-    const price = document.getElementById("price").value;
-    const cat = document.getElementById("cat").value;
-    const img = document.getElementById("img").value;
-
-    const pro = makeProduct(nextID++, name, detail, price, img, cat);
+    const pro = makeProduct(nextID++, name.value, detail.value, price.value, img.value, cat.value);
     products = addProduct(products, pro);
 
     saveLocal(products, "products");
     saveLocal(nextID, "nextID");
     refreshSeller(products);
+    hideForm();
+
+    name.value = "";
+    detail.value = "";
+    price.value = "";
+    img.value = "";
+    cat.value = "";
 }
 
 function editThis() {
+    showUpdate();
+    let product = findProduct(products, this.proID);
+    document.getElementById("btn-update").proID = this.proID;
 
+    name.value = product.name;
+    detail.value = product.details;
+    price.value = product.price;
+    img.value = product.image;
+    cat.value = product.category;
 }
 
 function removeThis() {
@@ -84,5 +99,23 @@ function domSearch() {
     if (type=="price") refreshSeller(searchProduct(products, "", text)); else
     if (type=="cat") refreshSeller(searchProduct(products, "", "", text));
 }
+
+function updateForm(id) {
+
+    console.log(products)
+    products = updateProduct(products, {
+        id: document.getElementById("btn-update").proID,
+        name: name.value,
+        details: detail.value,
+        price: price.value,
+        image:  img.value,
+        category: cat.value,
+    });
+    console.log(products)
+    saveLocal(products, "products");
+    refreshSeller(products);
+    hideForm();
+}
+
 
 refreshSeller(products);
