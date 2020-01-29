@@ -159,3 +159,8 @@ textarea {
     overflow: visible;
     /* background-color: white; */
 }
+.fa-search {
+    font-size: 7rem;
+    width:0%;
+    padding: 10px;
+    margin: 10px;}
