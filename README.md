@@ -60,7 +60,7 @@
     * We decide as a team to make issues for this site and solve it one by one.
 
 ## Stretch goals
-add check out interface using payment ways
-Develop cart interface
-get more accessibility for our site
-get it modern layout 
+ add check out interface using payment ways <br />
+ Develop cart interface<br />
+ get more accessibility for our site<br />
+ get it modern layout 
