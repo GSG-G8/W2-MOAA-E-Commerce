@@ -64,7 +64,7 @@ h1 {
     height: 45rem;
 }
 .button {
-    background-color: #4CAF50; /* Green */
+    background-color:red; /* Green */
     border: none;
     color: white;
     width: 100%;
@@ -72,11 +72,17 @@ h1 {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    opacity: .6;
     font-size: 5rem;
     cursor: pointer;
   }
+  .button:hover{
+
+    opacity: 1;
+  
+  }
 .green-btn {background-color: #4CAF50;} /* Green */
-.blue-btn {background-color: black;
+.blue-btn {background-color: #4CAF50;;
     opacity: .7};
 .red-btn {background-color: #f44336;} /* Red */
 
@@ -105,9 +111,16 @@ p,
 .cat,
 textarea {
     font-size: 5rem;
-    width: 99%;
+    width: 90%;
     padding: 2px;
     margin: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  
+
+}
+input,textarea{
+    border:1px solid gray;
 }
 option{
     font-size: 4rem;
