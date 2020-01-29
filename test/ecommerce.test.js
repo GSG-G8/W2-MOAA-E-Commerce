@@ -4,6 +4,7 @@ const {
   deleteProduct,
   findProduct,
   updateProduct,
+  searchProduct,
   addToCart,
   removeFromCart,
   totalPrice,
@@ -101,6 +102,24 @@ test('updateProduct() should update the object.', function () {
   expect(pro1).toEqual([{id:1, val:'hi'}, {id:2, val:'world'}]);
   expect(pro2).toEqual([{id:1, val:'hello'}, {id:2, val:'hi'}]);
   expect(pro3).toEqual([{id:1, val:'hello'}, {id:2, val:'world'}]);
+});
+
+////////////////////////////  updateProduct ///////////////////////////////////
+
+test('searchProduct() search based on name, price and category', function () {
+  let products = [
+    {id:1, name:'car', price:1200, category:1},
+    {id:2, name:'mobile1', price:300, category:1},
+    {id:3, name:'hat', price:20, category:2},
+    {id:4, name:'tv', price:300, category:2},
+    {id:5, name:'mobile2', price:400, category:3},
+    {id:6, name:'t-shirt', price:70, category:3},
+  ];
+
+  let actual1 = searchProduct(products, "mobile")
+  let expected1 = [{id:2, name:'mobile1', price:300, category:1}, {id:5, name:'mobile2', price:400, category:3}]
+  expect(actual1).toEqual(expected1);
+
 });
 
 ////////////////////////////  addToCart ///////////////////////////////////

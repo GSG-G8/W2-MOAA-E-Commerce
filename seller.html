@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Seller page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/seller.css">
+    </head>
+    <body>
+        <main class="visible">
+            <header>
+                <nav class="header_navbar">
+                    <div class="container">
+                    <img class="header_logo" src="img/logo.png">
+                    <ul class="header_list">
+                        <li class="header_list-li"><a class="header_ancor" href="index.html"> Home </a></li>
+                        <a class="header_ancor cart"><li class="fa fa-plus header_list-li"></li></a>
+                    </ul>
+                </div>
+                </nav>
+            </header>
+            <section class="clearfloat">
+                <div class="container">
+                <span for="search" class="fa fa-search"></span>
+                <input id="search" class="section_search-input" type="search" placeholder="search">
+            </div>
+            </section>
+            <section class="add-product">
+            </section>
+            <section class="all-product">
+                <h1> All Product In Store </h1>
+                <div class="product-contaner">
+                    <!--
+                    <div class="flex-heder">
+                        <div>Image</div>
+                        <div>Product</div>
+                        <div>Detail</div>
+                        <div>price</div>
+                        <div>Catogary</div>
+                        <div style="flex-shrink:3;" >Edit</div>
+                        <div style="flex-shrink:3;">Delete</div>
+                    </div>
+                    <div class="flex-content">
+                        <div><img class="product-img"  src="img/1.jpg" alt="proimg"></div>
+                        <div><p class="product-des">Product</p></div>
+                        <div><p class="product-des">Detail</p></div>
+                        <div><p class="product-des">price</p></div>
+                        <div><p class="product-des">Catogary</p></div>
+                        <div style="flex-shrink:3;" ><a class="button blue-btn" href="#">Edit</a></div>
+                        <div style="flex-shrink:3;"><a class="button red-btn" href="#">Delete</a></div>
+                    </div>
+                -->
+
+                </div>
+            </section>
+        </main>
+
+        <section class="form-sec">
+            <div class="form-div">
+                <div class="close-btn"><span>&times;</span></div>
+                <div> <label for="name">Product Name</label>
+                    <input type="text" id="name"  placeholder="Product Name"></div>
+                <div> <label for="detail">Product Detail</label>
+                    <textarea type="text" id="detail"  placeholder="Detail"></textarea> </div>
+                <div><label for="price">Product Price</label>
+                    <input type="text" id="price"  placeholder="Price"></div>
+                <div> <label for="cat">Product Catogary</label>
+                    <select id="cat">
+                            <option value="clothis"> clothis </option>
+                            <option value="Accosary"> Accosary</option>
+                            <option value="Shoes"> Shoes</option>
+                            <option value="fashin"> fashin</option>
+                            <option value="Jakets"> Jakets</option>
+                        </select></div>
+                <div> <label for="img">Product Image</label>
+                    <input type="text"  placeholder="Img http "  id="img"></div>
+                <div> <button class="form-button" id="add">Add Product </button>  </div>
+            </div>
+        </section>
+    
+        <script src="js/script.js"></script>
+        <script src='js/popup.js'></script>
+        <footer id="footer">
+            <p>&copy; Copyright 2020. All Rights Reserved for MOAA</p>
+        </footer>
+        
+    </body>
+</html>
