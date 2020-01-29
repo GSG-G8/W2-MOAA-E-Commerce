@@ -17,6 +17,7 @@
                         <li class="header_list-li"><a class="header_ancor" href="index.html"> Home </a></li>
                         <a class="header_ancor cart" href="cart.html"><li class="fa fa-shopping-cart header_list-li"> </li></a>
                         <!-- <li class="fa fa-plus header_list-li"></li> -->
+                        <span id="cart-count" style="color:#5a0; font-size:32px; padding:5px">0</span>
                     </ul>
                 </div>
                 </nav>
@@ -24,8 +25,8 @@
                 <div class="container">
                 <label for="search" class="fa fa-search"></label>
 
-                <input id="search" class="section_search-input" type="search" placeholder="search" onkeyup="domSearchCustomer()">
-                <select class="search__option">
+                <input id="search" class="section_search-input" type="text" placeholder="search" onkeyup="domSearchCustomer()">
+                <select class="search__option" onchange="domSearch()">
                     <option value="name">name</option>
                     <option value="price">price</option>
                     <option value="cat">categories</option>

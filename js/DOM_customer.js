@@ -2,6 +2,7 @@
 
 function addThisToCart() {
     cart = addToCart(cart, this.proID);
+    document.getElementById("cart-count").textContent = cart.length+"";
     saveLocal(cart, "cart");
 }
 
@@ -30,7 +31,12 @@ function refreshCustomer(arr) {
 
 function domSearchCustomer() {
     let text = document.getElementById("search").value;
-    refreshCustomer(searchProduct(products, text));
+    let type = document.getElementsByClassName("search__option")[0].value;
+    if (type=="name") refreshCustomer(searchProduct(products, text)); else
+    if (type=="price") refreshCustomer(searchProduct(products, "", text)); else
+    if (type=="cat") refreshCustomer(searchProduct(products, "", "", text));
 }
 
+
 refreshCustomer(products);
+document.getElementById("cart-count").textContent = cart.length+"";
