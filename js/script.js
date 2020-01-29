@@ -56,7 +56,7 @@ function searchProduct(arr, text="", price="", category="") {
 // example : add product with id '12' to cart 'cart'
 //  cart = addToCart(cart, 12);
 function addToCart(arr, id) {
-    return [...arr, id];
+    return arr.indexOf(id)>=0 ? [...arr] : [...arr, id];
 }
 
 // return new copy of array with the new object
