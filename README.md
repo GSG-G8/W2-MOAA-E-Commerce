@@ -54,14 +54,7 @@
  Divide the project work into team members so that the work is as pairs
  each pairs work on their sec and make thier issues
  we gather all sections 
-    * We decide as ateam to make issues for this site
-`firstly we make 5 Issues`
-  * section 1 navbar and header @omar-dahdouh @ahmadysalah
-  * section 2 portfolio @omar-dahdouh @ahmadysalah
-  * section 3 about us @AlaaSaadeddin @mariamisa
-  * section 4 team member@AlaaSaadeddin @ahmadysalah
-  * section 5 Contact us @omar-dahdouh @mariamisa
-
+    * We decide as ateam to make issues for this site and solve it one by one.
 
 ## User Stories
 As a client looking to hire a team of developers
