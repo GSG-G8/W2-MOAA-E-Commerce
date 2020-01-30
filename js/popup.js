@@ -1,21 +1,17 @@
 
-
-const table = document.querySelector(".form-sec");
-
-
 function showForm() {
-  document.body.style.cssText = "background-color:gray"
-  document.querySelector('.visible').classList = "invisable"
-  document.querySelector('.form-sec').style.cssText = "display:block;"
+  document.body.style.backgroundColor = "#666";
+  document.querySelector('.visible').className = "invisable";
+  document.querySelector('.form-sec').style.display = "block";
 
   document.getElementById("add").style.display = "inline-block";
   document.getElementById("btn-update").style.display = "none";
 }
 
 function hideForm() {
-  document.body.style.cssText = "background-color:white"
-  document.querySelector('.form-sec').style.cssText = "display:none;"
-  document.querySelector('.invisable').classList = "visible"
+  document.body.style.backgroundColor = "#fff";
+  document.querySelector('.form-sec').style.display = "none";
+  document.querySelector('.invisable').className = "visible";
 }
 
 
