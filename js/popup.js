@@ -1,8 +1,4 @@
 
-
-const table = document.querySelector(".form-sec");
-
-
 function showForm() {
   document.body.style.backgroundColor = "#666";
   document.querySelector('.visible').className = "invisable";
