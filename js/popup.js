@@ -21,7 +21,6 @@ function hideForm() {
 
 function showUpdate() {
   showForm();
-
   document.getElementById("add").style.display = "none";
   document.getElementById("btn-update").style.display = "inline-block";
 }

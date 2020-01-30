@@ -29,7 +29,6 @@
                     <option value="price">price</option>
                     <option value="cat">categories</option>
                 </select>
-
             </div>
             </section>
             <section class="add-product">
@@ -57,15 +56,14 @@
                         <div style="flex-shrink:3;"><a class="button red-btn" href="#">Delete</a></div>
                     </div>
                 -->
-
                 </div>
             </section>
         </main>
-
         <section class="form-sec">
             <div class="form-div">
+                <div class="close-btn" onclick="hideForm()"><span>&times;</span></div>
+
                 <table>
-                    <div class="close-btn" onclick="hideForm()"><span>&times;</span></div>
                     <tr>
                         <td><label for="name">Product Name</label></td>
                         <td><input type="text" id="name"  placeholder="Product Name"></div></td>
@@ -101,22 +99,15 @@
                             <button class="form-button" id="btn-update" onclick="updateForm()">Update Product</button>
                         </td>
                     </tr>
-                </table>
-                
-                    
+                </table>     
             </div>
         </section>
-    
-
         <script src="js/script.js"></script>
         <script src="js/localstorage.js"></script>
         <script src="js/DOM.js"></script>
         <script src='js/popup.js'></script>
-
         <footer id="footer">
             <p>&copy; Copyright 2020. All Rights Reserved for MOAA</p>
         </footer>
-        
-        
     </body>
 </html>

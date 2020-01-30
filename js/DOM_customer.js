@@ -40,3 +40,4 @@ function domSearchCustomer() {
 
 refreshCustomer(products);
 document.getElementById("cart-count").textContent = cart.length+"";
+
