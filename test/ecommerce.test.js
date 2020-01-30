@@ -40,7 +40,6 @@ test('addProduct() should add the object to the array', function () {
 
 test('deleteProduct() should not mutate the origional array', function () {
   let currentProducts = [{id:1, val:'hello'}, {id:2, val:'world'}];
-  
   let oldProducts = [...currentProducts];
   deleteProduct(currentProducts, 1);
   expect(oldProducts).toEqual(currentProducts);

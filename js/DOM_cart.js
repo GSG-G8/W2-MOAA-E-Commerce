@@ -9,7 +9,6 @@ function removeThisFromCart() {
 function refreshCart(arr) {
     let cont = document.getElementsByClassName("section__cart")[0];
     cont.innerHTML = "";
-    console.log(arr);
     arr.forEach(proID => {
         const product = findProduct(products, proID);
         if (!product) return;
@@ -29,7 +28,7 @@ function refreshCart(arr) {
         </div>
         <div class="section__info">
             <label>quantity :</label>
-            <select id="quantity">
+            <select id="eee" onchange= price(${product.price})>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -42,10 +41,10 @@ function refreshCart(arr) {
                 <option value="10">10</option>
             </select>
         </div>
-        <div class="section__info">
+        <div id='total' class="section__info">
             <p>total price : ${product.price}$</p>
         </div>`;
-
+      
         let remove = document.createElement("div");
         let rembtn = document.createElement("button");
 
@@ -60,6 +59,9 @@ function refreshCart(arr) {
         cont.appendChild(div);
     });
 }
-
-
 refreshCart(cart);
+function price(a){
+    const qu=document.getElementById('eee').value
+    document.getElementById('total').textContent=a*qu+"$"
+    
+ }

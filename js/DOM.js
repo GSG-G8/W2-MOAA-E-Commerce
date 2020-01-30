@@ -9,7 +9,6 @@ const img = document.getElementById("img");
 const addbtn = document.getElementById("add");
 addbtn.addEventListener('click', function() {
     domAddProduct();
-    console.log(products);
 })
 
 
@@ -101,8 +100,6 @@ function domSearch() {
 }
 
 function updateForm(id) {
-
-    console.log(products)
     products = updateProduct(products, {
         id: document.getElementById("btn-update").proID,
         name: name.value,
@@ -111,7 +108,6 @@ function updateForm(id) {
         image:  img.value,
         category: cat.value,
     });
-    console.log(products)
     saveLocal(products, "products");
     refreshSeller(products);
     hideForm();
